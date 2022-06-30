@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #24252A;
+    width: 100vw;
+}
+
+.header {
+    grid-area: header;
+    width: 100vw;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.main {
+    grid-area: main;
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.aside {
+    grid-area: aside;
+    width: 100vw;
+}
+
+.footer {
+    width: 100vw;
+    grid-area: footer
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5,1fr) ;
+    grid-template-areas: 
+    "header" 
+    "navbar" 
+    "main"  
+    "aside"
+    "footer";
+    height: 100vh;
+    width: 100vw
+    }
+
+    .grid-container > * {
+        box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+        border-radius: 4px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    @media (min-width: 1024px){
+        .grid-container{
+        grid-template-columns: 40vw 100vw;
+        grid-template-rows: 20vh auto auto auto 40vh;
+        grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "main     main"
+        "aside   aside"
+        "footer footer";
+        }
+    }
+
+/* ends layout grid */
+
+/* navbar */
+
+li, a, .button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500vw;
+    font-size: 16px;
+    text-decoration: none;
+    color: #edf0f1
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.logo {
+    cursor: pointer;
+    width: auto;
+    height: 6vh;
+}
+
+.nav__links {
+    list-style: none;
+}
+
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+    color: #0088A9
+}
+
+.button {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.button:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* ends nav flex */
+
+/* header */
+
+header img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ends header */
+
+/* main */
+
+.box__txt{
+    width: 90%;
+    height: auto;
+    margin: 50px auto;
+    padding: 50px 30px;
+    opacity: 90%;
+    border: double 2px white;
+    background-color: rgba(66, 66, 66);
+}
+
+.bg__dark{
+background-color: rgba(66, 66, 66);
+}
+
+#bg__gris{
+    background-color: rgba(66, 66, 66);
+}
+
+.txt__color{
+    color: white;
+}
+
+.h1{
+    font-size: 30px;
+}
+
+/* aside */
+
+.photo{
+    width: 25vw;
+    margin-top: 30px;
+}
+
+.photo__box{
+    border: double 2px white;
+}
+
+.align{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+/* ends aside */
+
+/* footer */
+
+footer{
+    position:inherit;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #24252A;
+    height: auto;
+    width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400vw;
+    text-transform:capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 50vw;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+}
+
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i{
+    color: #0088A9;
+}
+
+.footer-bottom{
+    width: auto;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 20vw;
+}
+
+/* ends footer */
+
+/* ==contacto== */
+
+
+.contact-section{
+    background-color: #24252A;
+    background-size: cover;
+    padding: 40px 0;
+}
+
+.contact-section h1{
+    text-align: center;
+    color: #ddd;
+}
+
+.border{
+    width: 100px;
+    height: 10px;
+    background: #0088A9;
+    margin: 40px auto;
+}
+
+.contact-form{
+    max-width: 600vw;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+}
+
+.contact-form-text:hover{
+    box-shadow: 0 0 10px 4px #344953;
+}
+
+textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+}
+
+.contact-form-btn{
+    float: right;
+    border: 0;
+    background:#0088A9;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.contact-form-btn:hover{
+    background: rgba(0, 136, 169, 0.8);
+}
+
+/* ubicación */
+
+.padd-ubi{
+padding: 15px ;
+}
+
+.h2 {
+    color: #fff;
+    padding: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #24252A;
+    font-size: 20px;
+}
+
+#button-ubi {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500vw;
+    font-size: 16px;
+    text-decoration: none;
+    color: #edf0f1
+}
+
+#button-ubi:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* MAP */
+#map {
+    height: 40vh;
+    width: 100%;
+}
+
+/* ========================ANIMACIONES====================== */
+@keyframes headerAnimation{
+    0%{background-image: url(../images/header.jpg);}
+    25%{background-image: url(../images/header2.jpg);}
+    50%{background-image: url(../images/header3.jpg);}
+    75%{background-image: url(../images/header4.jpg);}
+    100%{background-image: url(../images/header5.jpg);}
+}
+
+header{
+    height: 100vh;
+    animation-name: headerAnimation;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    background-size: cover;
+    animation-timing-function: ease-in;
+}
